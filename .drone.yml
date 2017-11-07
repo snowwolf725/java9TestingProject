@@ -1,0 +1,6 @@
+pipeline:
+  build:
+    image: openjdk/9-jdk
+    commands:
+      - chmod a+x gradlew
+      - ./gradlew assembleRelease

@@ -1,0 +1,30 @@
+apply plugin:'java'
+apply plugin:'eclipse'
+apply plugin:'application'
+mainClassName = "Main"
+compileJava.options.encoding = 'UTF-8'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.5'
+}
+
+repositories {
+    flatDir {
+		dirs = ["libs"]
+   }
+   mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ["src"]
+        }
+    }
+}
+
+sourceCompatibility = 9
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
