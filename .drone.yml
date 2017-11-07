@@ -3,4 +3,4 @@ pipeline:
     image: java:openjdk-7
     commands:
       - chmod a+x gradlew
-      - ./gradlew assembleRelease
+      - ./gradlew build
